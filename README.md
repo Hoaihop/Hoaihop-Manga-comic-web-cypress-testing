@@ -43,14 +43,15 @@ cd Project_CICD
 ```bash
 cd .\backend\
 npm install
+```
 
-Create a .env file inside backend/:
-
+```bash
+Set up file .env:
 PORT=5000
-MONGO_URI=mongodb://localhost:27017/project_cicd
+MONGO_URI=mongodb://localhost:27017/truyendex
+```
 
-Start the backend:
-
+```bash
 npm run start
 ```
 
