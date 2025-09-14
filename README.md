@@ -29,40 +29,6 @@ This project is designed with a clean architecture, supports testing (Cypress, V
 
 ---
 
-## 📂 Project Structure
-
-Project_CICD/
-│
-├── backend/ # Backend service (Node.js + Express + MongoDB)
-│ ├── config/ # Configuration files
-│ ├── controllers/ # API controllers
-│ ├── models/ # Database models
-│ ├── routes/ # API routes
-│ ├── utils/ # Helper utilities
-│ ├── .env # Environment variables (ignored in Git)
-│ ├── index.js # Server entry point
-│ └── package.json
-│
-├── client/ # Frontend service (React + Vite)
-│ ├── public/ # Public static files
-│ ├── src/ # React source code
-│ │ ├── components/ # Reusable components
-│ │ ├── pages/ # Application pages
-│ │ ├── styles/ # CSS / stylesheets
-│ │ └── utils/ # Utility functions
-│ ├── cypress/ # Cypress end-to-end tests
-│ ├── cypress.config.js
-│ ├── vite.config.js
-│ └── package.json
-│
-├── .gitignore
-└── README.md
-
-yaml
-Copy code
-
----
-
 ## ⚙️ Installation & Setup
 
 1/ Clone the repository
