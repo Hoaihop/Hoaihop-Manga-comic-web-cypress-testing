@@ -1,0 +1,41 @@
+/* Container chứa combobox chọn chương */
+.chapter-select-container {
+  margin-top: 20px; /* Khoảng cách giữa combobox và các phần khác */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background-color: #fff; /* Đảm bảo nền sáng */
+  position: sticky;
+  top: 0; /* Gắn combobox ở trên cùng */
+  z-index: 2; /* Đảm bảo combobox không bị chồng lên */
+  width: 100%;
+  margin-top: 200px;
+  margin-left: 120px;
+}
+
+/* Style cho select */
+.chapter-select-container select {
+  padding: 8px;
+  font-size: 16px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+/* Container chứa ảnh */
+.images-container {
+  display: flex;
+  flex-direction: column; /* Xếp theo chiều dọc */
+  align-items: center; /* Căn giữa ảnh theo chiều ngang */
+  padding: 0; /* Loại bỏ padding */
+  margin: 0; /* Loại bỏ margin */
+  margin-left: 200px;
+}
+
+/* Các ảnh */
+.images-container img {
+  max-width: 100%; /* Đảm bảo ảnh chiếm toàn bộ chiều ngang container */
+  margin: 0; /* Loại bỏ khoảng cách giữa các ảnh */
+  border-radius: 0; /* Loại bỏ bo tròn nếu không cần thiết */
+  display: block; /* Đảm bảo ảnh là khối, tránh khoảng trống từ inline elements */
+}

@@ -1,0 +1,141 @@
+.header {
+  background-color: #563d7c;
+  padding: 10px 0;
+  color: white;
+  width: 100%;
+  position: fixed; /* Cố định header ở trên cùng */
+  top: 0;
+  left: 0;
+  z-index: 1000; /* Đảm bảo header nằm trên các thành phần khác */
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo h1 {
+  font-size: 1.8rem;
+  margin: 0;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Khoảng cách giữa nút và ô tìm kiếm */
+}
+
+.search-bar input {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  width: 250px;
+  font-size: 0.9rem;
+  transition: all 0.3s ease; /* Hiệu ứng chuyển khi focus */
+}
+
+.search-bar input:focus {
+  outline: none;
+  border-color: #ff8800;
+  box-shadow: 0 0 5px rgba(255, 136, 0, 0.5);
+}
+
+.search-bar button {
+  padding: 10px 16px;
+  background-color: #ff8800;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.search-bar button:hover {
+  background-color: #ff9900;
+  box-shadow: 0 0 5px rgba(255, 136, 0, 0.5);
+}
+
+.user-actions {
+  display: flex;
+  gap: 20px; /* Tạo khoảng cách giữa các hành động người dùng */
+}
+
+.login-button {
+  padding: 10px 16px;
+  background-color: #ff8800;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.login-button:hover {
+  background-color: #ff9900;
+  text-decoration: none; /* Giữ nút không có gạch chân khi hover */
+  box-shadow: 0 0 5px rgba(255, 136, 0, 0.5);
+}
+
+/* Media Query cho màn hình nhỏ hơn 768px (Tablet và Mobile) */
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+  .search-bar {
+    width: 100%;
+  }
+
+  .search-bar input {
+    width: calc(100% - 110px); /* Ô tìm kiếm tự động co lại khi nút hiện */
+  }
+
+  .search-bar button {
+    width: 100%;
+    /* Nút nằm dưới ô tìm kiếm trên màn hình nhỏ */
+  }
+
+  .logo h1 {
+    font-size: 1.5rem; /* Giảm kích thước logo trên màn hình nhỏ */
+    margin-bottom: 10px;
+  }
+
+  .user-actions {
+    margin-top: 10px;
+    gap: 10px;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .login-button {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* Media Query cho màn hình nhỏ hơn 480px (Mobile nhỏ) */
+@media (max-width: 480px) {
+  .header-container {
+    padding: 10px 20px;
+  }
+
+  .logo h1 {
+    font-size: 1.2rem; /* Logo nhỏ hơn trên màn hình rất nhỏ */
+  }
+
+  .search-bar input {
+    width: 100%;
+    padding: 8px;
+  }
+
+  .user-actions a {
+    font-size: 0.9rem; /* Font chữ nhỏ hơn trên mobile */
+  }
+}

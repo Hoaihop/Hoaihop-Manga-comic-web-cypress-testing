@@ -1,0 +1,89 @@
+.footer {
+  background-color: #111; /* Màu nền tối hơn để dễ nhìn hơn */
+  color: #fff;
+  padding: 10px 0; /* Padding phía trên và dưới vừa phải */
+  font-family: Arial, sans-serif;
+
+  flex-direction: column;
+  align-items: center; /* Căn giữa tất cả phần tử trong footer */
+  margin-top: 100px;
+  width: 100%; /* Đảm bảo footer chiếm toàn bộ chiều rộng */
+}
+
+.footer-content {
+  max-width: 1800px;
+  width: 100%; /* Đảm bảo chiều rộng phù hợp với màn hình */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Căn giữa tất cả các phần tử trong footer-content */
+  padding: 0 2rem; /* Padding cho nội dung để tránh bị chặt chẽ */
+}
+
+.footer-logo {
+  font-size: 2.5rem; /* Kích thước logo lớn hơn để dễ nhận diện */
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.footer-links {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center; /* Căn giữa các liên kết */
+  gap: 2rem; /* Khoảng cách giữa các liên kết */
+  flex-wrap: wrap; /* Cho phép các liên kết xuống dòng trên màn hình nhỏ */
+}
+
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #ff0; /* Thay đổi màu khi hover */
+}
+
+.footer-section p {
+  font-size: 1rem;
+  color: #aaa;
+  line-height: 1.6; /* Tăng chiều cao dòng để dễ đọc hơn */
+  margin-bottom: 1rem;
+  word-wrap: break-word;
+}
+
+.footer-section strong {
+  color: #f00;
+}
+
+.footer-bottom {
+  margin-top: 3rem;
+  font-size: 1rem;
+  color: #aaa;
+}
+
+.footer-bottom p {
+  margin: 0;
+}
+
+.footer-section a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.footer-section a:hover {
+  color: #ff0;
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    padding: 1rem;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    align-items: center;
+  }
+}

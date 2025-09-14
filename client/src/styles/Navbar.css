@@ -1,0 +1,60 @@
+.navbar {
+  background-color: #4b3b68;
+  padding: 10px 0;
+  width: 100%;
+  position: fixed;
+  top: 50px;
+  z-index: 999;
+}
+
+.menu-toggle {
+  display: none; /* Mặc định ẩn nút ba gạch ngang */
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  margin-left: 15px;
+  cursor: pointer;
+}
+
+.navbar-menu {
+  max-width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+.navbar-menu li {
+  margin: 0 15px;
+}
+
+.navbar-menu li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Ẩn menu trên màn hình nhỏ khi chưa mở */
+.navbar-menu.hidden {
+  display: none;
+}
+
+/* Media Query cho màn hình nhỏ hơn 768px (Tablet và Mobile) */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block; /* Hiển thị nút ba gạch ngang trên màn hình nhỏ */
+  }
+
+  .navbar-menu {
+    flex-direction: column; /* Chuyển từ hàng sang cột */
+    align-items: center;
+  }
+}
+
+/* Media Query cho màn hình nhỏ hơn 480px (Mobile nhỏ) */
+@media (max-width: 480px) {
+  .navbar-menu li a {
+    font-size: 0.9rem; /* Giảm kích thước font cho các mục trong menu */
+  }
+}
