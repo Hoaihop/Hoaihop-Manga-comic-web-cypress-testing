@@ -41,7 +41,7 @@ cd Project_CICD
 ### 2️⃣ Backend setup
 
 ```bash
-cd backend
+cd .\backend\
 npm install
 
 Create a .env file inside backend/:
@@ -57,7 +57,7 @@ npm run start
 ### 3️⃣ Frontend setup
 
 ```bash
-cd ../client
+cd .\client\
 npm install
 npm run dev
 ```
