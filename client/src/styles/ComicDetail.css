@@ -1,0 +1,179 @@
+/* Comic Detail - Đã thay đổi tên class */
+.comic-detail-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  gap: 30px;
+  width: 100%; /* Đảm bảo diện tích chiếm toàn bộ màn hình */
+  max-width: 1200px; /* Giới hạn độ rộng tối đa */
+  margin: 0 auto; /* Căn giữa trang */
+  box-sizing: border-box; /* Đảm bảo tính toán đúng độ rộng */
+  margin-top: 100px;
+  margin-left: 300px;
+}
+
+.comic-detail-info {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 20px;
+  width: 100%; /* Đảm bảo thông tin chiếm toàn bộ không gian */
+  max-width: 1200px; /* Giới hạn độ rộng */
+  box-sizing: border-box; /* Đảm bảo không tràn ra ngoài */
+  margin-top: 30px; /* Khoảng cách phía trên */
+}
+
+.comic-detail-image {
+  width: 250px;
+  height: 350px; /* Tăng chiều cao để phù hợp với tỷ lệ */
+  border-radius: 8px;
+  object-fit: cover; /* Giữ tỷ lệ hình ảnh */
+}
+
+.comic-detail-text {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  width: 100%; /* Đảm bảo phần mô tả chiếm toàn bộ chiều rộng của phần chứa */
+  box-sizing: border-box; /* Đảm bảo tính toán đúng kích thước */
+}
+
+.comic-detail-text h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+  white-space: nowrap; /* Ngừng ngắt dòng */
+  overflow: hidden; /* Ẩn phần văn bản bị tràn */
+  text-overflow: ellipsis; /* Thêm dấu "..." nếu văn bản quá dài */
+}
+
+.comic-detail-text p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 10px;
+  text-align: justify; /* Căn đều văn bản */
+  width: 100%; /* Đảm bảo chiều rộng chiếm toàn bộ không gian */
+  max-width: calc(
+    1200px - 280px
+  ); /* Giới hạn chiều rộng cho phần mô tả (căn chỉnh với hình ảnh) */
+  box-sizing: border-box; /* Đảm bảo không bị tràn */
+  overflow: hidden; /* Đảm bảo không bị tràn ra ngoài */
+  text-overflow: ellipsis; /* Nếu văn bản dài, hiển thị "..." */
+}
+
+.comic-action-buttons {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.comic-action-button {
+  background-color: #ff5c5c;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.comic-action-button:hover {
+  background-color: #ff3333;
+}
+
+.comic-chapter-list ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.comic-chapter-list li {
+  margin: 10px 0;
+  background-color: #f9f9f9;
+  padding: 10px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.comic-chapter-list li:hover {
+  background-color: #f0f0f0;
+  transform: translateX(10px);
+}
+
+.comic-chapter-list a {
+  text-decoration: none;
+  color: #007bff;
+  font-size: 16px;
+}
+
+.comic-chapter-list a:hover {
+  text-decoration: underline;
+  color: #0056b3;
+}
+
+/* Đảm bảo có đủ khoảng cách cho các nội dung */
+.comic-chapter-list {
+  width: 100%;
+  margin-top: 30px;
+  padding: 20px 0;
+  border-top: 1px solid #ccc;
+}
+
+.comic-chapter-list h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Phản hồi di động */
+@media (max-width: 768px) {
+  .comic-detail-info {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .comic-detail-image {
+    width: 200px; /* Thu nhỏ ảnh trên màn hình nhỏ */
+    height: 300px;
+  }
+
+  .comic-detail-text h2 {
+    font-size: 24px;
+    white-space: normal; /* Cho phép xuống dòng trên màn hình nhỏ */
+  }
+
+  .comic-action-buttons {
+    flex-direction: column;
+  }
+
+  .comic-action-button {
+    margin-bottom: 10px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .comic-detail-page {
+    padding: 10px;
+  }
+
+  .comic-detail-info {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .comic-detail-image {
+    width: 150px;
+    height: 225px;
+  }
+
+  .comic-detail-text h2 {
+    font-size: 20px;
+    white-space: normal; /* Cho phép xuống dòng trên màn hình nhỏ */
+  }
+
+  .comic-action-buttons {
+    flex-direction: column;
+  }
+}
