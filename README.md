@@ -36,8 +36,11 @@ This project is designed with a clean architecture, supports testing (Cypress, V
 ```bash
 git clone https://github.com/Hoaihop/Hoaihop-Manga-comic-web-cypress-testing.git
 cd Project_CICD
+```
 
-2️⃣ Backend setup
+### 2️⃣ Backend setup
+
+```bash
 cd backend
 npm install
 
@@ -49,13 +52,19 @@ MONGO_URI=mongodb://localhost:27017/project_cicd
 Start the backend:
 
 npm run start
+```
 
-3️⃣ Frontend setup
+### 3️⃣ Frontend setup
+
+```bash
 cd ../client
 npm install
 npm run dev
+```
 
-4️⃣ Testing with Cypress
+### 4️⃣ Testing with Cypress
+
+```bash
 npm run cypress:open
 npm run cypress:run
 ```
